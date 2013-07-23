@@ -1,0 +1,50 @@
+[
+    {
+        "name": "vierbergenlars/simpletest",
+        "version": "v1.1.2",
+        "version_normalized": "1.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/vierbergenlars/simpletest.git",
+            "reference": "v1.1.2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/vierbergenlars/simpletest/zipball/v1.1.2",
+            "reference": "v1.1.2",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5"
+        },
+        "time": "2012-05-18 03:44:55",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                ""
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL"
+        ],
+        "authors": [
+            {
+                "name": "Marcus Baker",
+                "homepage": "http://sourceforge.net/users/lastcraft"
+            },
+            {
+                "name": "Perrick Penet",
+                "homepage": "http://sourceforge.net/users/pp11"
+            }
+        ],
+        "description": "Unit testing for PHP",
+        "keywords": [
+            "SimpleTest",
+            "test",
+            "testing",
+            "unittest"
+        ]
+    }
+]
