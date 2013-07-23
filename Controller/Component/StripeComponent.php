@@ -13,7 +13,6 @@
  */
 
 App::uses('Component', 'Controller');
-Configure::load('stripe'); //Load the config file
 /**
  * StripeComponent
  *
