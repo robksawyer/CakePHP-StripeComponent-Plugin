@@ -294,6 +294,23 @@ class StripeComponent extends Component {
 	}
 
 /**
+ * updateSubscription method
+ * @param string $customer_id The customer id
+ * @param string $plan_id The plan id
+ * @return array
+ */
+	public function updateSubscription($customer_id, $plan_id){
+		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
+		if (!$key) {
+			throw new CakeException('Stripe API key is not set.');
+		}
+		Stripe::setApiKey($key);
+		
+		$customer = Stripe_Customer::retrieve($customer_id);
+		return $customer->updateSubscription( array('plan' => $plan_id) );
+	}
+
+/**
  * Returns an array of fields we want from Stripe's charge object
  *
  *
