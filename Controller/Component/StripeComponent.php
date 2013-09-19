@@ -296,18 +296,36 @@ class StripeComponent extends Component {
 /**
  * updateSubscription method
  * @param string $customer_id The customer id
- * @param string $plan_id The plan id
+ * @param array $params A mixture of API params for the method
  * @return array
  */
-	public function updateSubscription($customer_id, $plan_id){
+	public function updateSubscription($customer_id, $params){
 		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
 		if (!$key) {
 			throw new CakeException('Stripe API key is not set.');
 		}
 		Stripe::setApiKey($key);
-		
+
 		$customer = Stripe_Customer::retrieve($customer_id);
-		return $customer->updateSubscription( array('plan' => $plan_id) );
+		return $customer->updateSubscription( $params );
+	}
+
+
+/**
+ * updateSubscription method
+ * @param string $customer_id The customer id
+ * @param array $params A mixture of API params for the method
+ * @return array
+ */
+	public function cancelSubscription($customer_id, $params = array()){
+		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
+		if (!$key) {
+			throw new CakeException('Stripe API key is not set.');
+		}
+		Stripe::setApiKey($key);
+
+		$customer = Stripe_Customer::retrieve($customer_id);
+		return $customer->cancelSubscription( $params );
 	}
 
 /**
