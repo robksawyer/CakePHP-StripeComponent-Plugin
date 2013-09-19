@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4fc6b927a29e851fd00fc2cda5ac4365",
+    "hash": "c65390d9406217f3fc351a6226d5e8b8",
     "packages": [
 
     ],
@@ -13,13 +13,13 @@
             "version": "v1.1.2",
             "source": {
                 "type": "git",
-                "url": "git://github.com/vierbergenlars/simpletest.git",
-                "reference": "v1.1.2"
+                "url": "https://github.com/vierbergenlars/simpletest.git",
+                "reference": "6d8cf373988693472d45ee03deb2a57ec7e34c69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/vierbergenlars/simpletest/zipball/v1.1.2",
-                "reference": "v1.1.2",
+                "url": "https://api.github.com/repos/vierbergenlars/simpletest/zipball/6d8cf373988693472d45ee03deb2a57ec7e34c69",
+                "reference": "6d8cf373988693472d45ee03deb2a57ec7e34c69",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
                 "testing",
                 "unittest"
             ],
-            "time": "2012-05-18 03:44:55"
+            "time": "2012-05-18 10:44:55"
         }
     ],
     "aliases": [
@@ -64,7 +64,9 @@
     ],
     "platform": {
         "php": ">=5.2",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
     },
     "platform-dev": [
 
